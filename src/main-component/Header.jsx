@@ -1,7 +1,14 @@
-"use client";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client"
 
-export default function Header() {
+
+
+export default async function Header() {
+  
+const { data: session } = await authClient.getSession();
+console.log(session);
+
+
   return (
     <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-200 shadow-sm">
       <div className="navbar max-w-7xl mx-auto px-4 lg:px-8">
