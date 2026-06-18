@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-violet-950 to-indigo-950 flex items-center justify-center px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-linear-to-br from-slate-950 via-violet-950 to-indigo-950 flex items-center justify-center px-4 relative overflow-hidden">
       {/* Blobs */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-violet-600/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none" />
@@ -16,7 +16,7 @@ export default function NotFound() {
           <p className="text-[200px] font-black text-white/5 leading-none select-none">404</p>
           <div className="absolute inset-0 flex items-center justify-center">
             <div>
-              <p className="text-8xl font-black bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent leading-none">
+              <p className="text-8xl font-black bg-linear-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent leading-none">
                 404
               </p>
             </div>
@@ -34,12 +34,12 @@ export default function NotFound() {
           Page not found
         </h1>
         <p className="text-violet-300 text-lg leading-relaxed mb-10 max-w-lg mx-auto">
-          Looks like this lesson doesn't exist yet — or maybe it moved. Let's get you back on track.
+          Looks like this lesson doesnt exist yet — or maybe it moved. Lets get you back on track.
         </p>
 
         {/* Actions */}
         <div className="flex flex-wrap gap-4 justify-center mb-12">
-          <Link href="/" className="btn bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-none btn-lg rounded-2xl font-bold shadow-xl shadow-violet-900/40 hover:from-violet-700 hover:to-indigo-700 hover:scale-105 transition-all duration-300 px-8">
+          <Link href="/" className="btn bg-linear-to-r from-violet-600 to-indigo-600 text-white border-none btn-lg rounded-2xl font-bold shadow-xl shadow-violet-900/40 hover:from-violet-700 hover:to-indigo-700 hover:scale-105 transition-all duration-300 px-8">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
