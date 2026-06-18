@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export default function CourseCard({ image, title, instructor, rating, duration, level, category }) {
+export default function CourseCard({ image, title, instructor, rating, duration, level, category, id }) {
+  
   return (
     <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       {/* Thumbnail */}
@@ -58,8 +59,8 @@ export default function CourseCard({ image, title, instructor, rating, duration,
         </div>
 
         <Link
-          href="/courses/1"
-          className="block w-full text-center btn btn-sm bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-none hover:from-violet-700 hover:to-indigo-700 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-violet-100 pt-1.5"
+          href={`/courses/${id}`}
+          className="block w-full text-center btn btn-sm bg-linear-to-r from-violet-600 to-indigo-600 text-white border-none hover:from-violet-700 hover:to-indigo-700 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-violet-100 pt-1.5"
         >
           Enroll Now
         </Link>
