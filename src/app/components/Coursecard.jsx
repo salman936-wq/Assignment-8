@@ -59,7 +59,7 @@ export default function CourseCard({ image, title, instructor, rating, duration,
 
         <Link
           href="/courses/1"
-          className="block w-full text-center btn btn-sm bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-none hover:from-violet-700 hover:to-indigo-700 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-violet-100"
+          className="block w-full text-center btn btn-sm bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-none hover:from-violet-700 hover:to-indigo-700 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-violet-100 pt-1.5"
         >
           Enroll Now
         </Link>
