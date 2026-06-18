@@ -1,7 +1,7 @@
-export const metadata = {
-  title: "Complete React & Next.js Developer — SkillSphere",
-};
-
+/* eslint-disable @next/next/no-img-element */
+"use client"
+import { redirect } from "next/navigation";
+import { useStateContext } from "@/context/StateContext";
 import CourseData from "../../../../public/courses.json";
 
 const getDataFromJson = (id) => {
@@ -13,7 +13,16 @@ const getDataFromJson = (id) => {
 
 //                 "category": "Marketing"
 
+// eslint-disable-next-line @next/next/no-async-client-component
 export default async function CourseDetailPage({ params }) {
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const {login} = useStateContext();
+  const isLoggedIn = login;
+  if (isLoggedIn) {
+    redirect("/login");
+  }
+
   const { id } = await params;
   const {title, instructor, duration, rating, level, description, image, category} = getDataFromJson(id);
   const profileLetter = instructor.split(' ').map(name => name[0]).join('');
@@ -51,7 +60,7 @@ export default async function CourseDetailPage({ params }) {
 
               {/* Instructor */}
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-violet-400 to-indigo-500 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-linear-to-br from-violet-400 to-indigo-500 flex items-center justify-center">
                   <span className="text-white font-bold">{profileLetter}</span>
                 </div>
                 <div>
@@ -70,7 +79,7 @@ export default async function CourseDetailPage({ params }) {
               <div className="p-6">
                 
               
-                <button className="w-full btn bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-none hover:from-violet-700 hover:to-indigo-700 rounded-2xl font-bold text-base mb-3 hover:shadow-xl hover:shadow-violet-200 transition-all duration-300">
+                <button className="w-full btn bg-linear-to-r from-violet-600 to-indigo-600 text-white border-none hover:from-violet-700 hover:to-indigo-700 rounded-2xl font-bold text-base mb-3 hover:shadow-xl hover:shadow-violet-200 transition-all duration-300">
                   Enroll Now
                 </button>
                 <button className="w-full btn btn-outline border-violet-200 text-violet-700 hover:bg-violet-50 rounded-2xl font-semibold">

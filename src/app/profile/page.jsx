@@ -1,8 +1,18 @@
-export const metadata = {
-  title: "My Profile — SkillSphere",
-};
+"use client"
+import { redirect } from "next/navigation";
+import { useStateContext } from "@/context/StateContext";
+
 
 export default function ProfilePage() {
+
+  const {login} = useStateContext();
+  const isLoggedIn = login;
+  if (isLoggedIn) {
+    redirect("/login");
+  }
+
+
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Profile hero banner */}

@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client"
-
+import LoginToggale from "@/app/components/LoginToggale";
 
 
 export default async function Header() {
   
 const { data: session } = await authClient.getSession();
 console.log(session);
-
 
   return (
     <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-200 shadow-sm">
@@ -67,6 +66,10 @@ console.log(session);
 
         {/* Right side */}
         <div className="navbar-end gap-2">
+          
+<div className=" tooltip tooltip-bottom tooltip-error" data-tip="Sorry for this. I tried for 4–5 hours to fix the issue where user data isn’t staying in cookies after login, but I couldn’t solve it, so I added the toggle button for now.
+"><LoginToggale></LoginToggale></div>
+
           <div className="hidden lg:flex items-center gap-2">
             <Link href="/login" className="btn btn-ghost btn-sm text-sm font-semibold text-base-content/70 hover:text-violet-600 hover:bg-violet-50 rounded-xl">
               Login
