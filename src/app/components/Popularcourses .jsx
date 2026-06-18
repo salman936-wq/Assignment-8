@@ -3,14 +3,6 @@ import CourseCard from "./Coursecard";
 import CourseData from "../../../public/courses.json";
 
 
-// image = "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&q=80"
-// title = "Complete React & Next.js Developer"
-// instructor = "Sarah Chen"
-// rating = "4.9"
-// duration = "24h 30m"
-// level = "Intermediate"
-// category = "Web Dev"
-
 const getRandomCourseData = ()=> {
 const randomSixData = CourseData
 .sort(()=> 0.5 - Math.random())

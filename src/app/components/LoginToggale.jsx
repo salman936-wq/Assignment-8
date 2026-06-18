@@ -1,5 +1,4 @@
 "use client";
-
 import { useStateContext } from "@/context/StateContext";
 
 export default function LoginToggle() {

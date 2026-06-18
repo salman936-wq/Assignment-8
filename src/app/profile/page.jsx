@@ -11,8 +11,6 @@ export default function ProfilePage() {
     redirect("/login");
   }
 
-
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Profile hero banner */}
