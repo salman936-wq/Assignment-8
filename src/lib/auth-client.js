@@ -1,8 +1,9 @@
 import { createAuthClient } from "better-auth/react"
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || ""
 
 export const authClient = createAuthClient({
-    baseURL: "http://localhost:3000"
+  baseURL,
 })
 
-export const { signIn, signUp, useSession } = createAuthClient()
+export const { signIn, signUp, useSession } = authClient

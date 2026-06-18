@@ -1,13 +1,12 @@
+"use client";
+
 import Link from "next/link";
-import { authClient } from "@/lib/auth-client"
+import { useSession } from "@/lib/auth-client"
 import LoginToggale from "@/app/components/LoginToggale";
 import HeaderButtons from "@/app/components/HeaderButtons";
 
-
-export default async function Header() {
-  
-const { data: session } = await authClient.getSession();
-console.log(session);
+export default function Header() {
+  const { data: session } = useSession();
 
   return (
     <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-200 shadow-sm">
